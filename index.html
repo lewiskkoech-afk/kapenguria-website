@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapenguria School</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+
+    /* ORANGE ANIMATED BACKGROUND */
+    background: linear-gradient(-45deg, #ff7e00, #ff512f, #ff9966, #ff6a00);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* CARD STYLE */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(255,165,0,0.6);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#values">Values</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h1>Kapenguria School 🎓</h1>
+    <p><strong>Motto:</strong> Hardwork Pays 💪🔥</p>
+
+    <div class="card">
+        <p>
+            Kapenguria School is the best school located in West Pokot County 🌍.
+            The school is known for academic excellence 📚, discipline 🏫, and outstanding performance.
+        </p>
+
+        <p>
+            With more than <strong>80 professional teachers 👨‍🏫👩‍🏫</strong>, students are guided to excel and achieve success 🌟.
+        </p>
+
+        <p><strong>Principal:</strong> MOSES NDEDA 👔</p>
+    </div>
+</section>
+
+<section id="academics">
+    <h2>Academics 📚</h2>
+
+    <div class="card">
+        <p>
+            The school offers a wide range of subjects including sciences 🔬, mathematics ➗,
+            languages 🗣️, and technical subjects. Students are prepared for both academic
+            and real-life success 🚀.
+        </p>
+
+        <p>
+            The school also leads in co-curricular activities ⚽🎭🎵 including sports,
+            drama, music, and science congress.
+        </p>
+    </div>
+</section>
+
+<section id="values">
+    <h2>School Values 💡</h2>
+
+    <div class="card">
+        <h3>Excellence 🏆</h3>
+        <p>
+            Excellence means striving to be the best ⭐. Students are encouraged to work hard 💪
+            and achieve top academic results while maintaining discipline and focus.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Integrity 🤝</h3>
+        <p>
+            Integrity means honesty and responsibility 👍. Students are taught to always do the right thing,
+            respect others, and build strong moral character.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Teamwork 👨‍👩‍👧‍👦</h3>
+        <p>
+            Teamwork means working together 🤝. Students learn cooperation and unity through group work,
+            sports, and shared responsibilities.
+        </p>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>📸 School Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://i.imgur.com/ndYSZjw.jpeg" alt="Students">
+        <img src="https://i.imgur.com/Odskk9z.jpeg" alt="School Building">
+        <img src="https://i.imgur.com/Hh8LEEq.jpeg" alt="Laboratory">
+        <img src="https://i.imgur.com/9PR4YqI.jpeg" alt="Parade">
+        <img src="https://i.imgur.com/y5jEKXA.jpeg" alt="School Compound">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact 📞</h2>
+    <p>📍 Address: 343-30600, Kapenguria</p>
+    <p>📱 Tel: 0743343343</p>
+    <p>📧 Email: kapeboys@gmail.com</p>
+</section>
+
+<footer>
+    <p>Website developed by <strong>LEWIS KIPKOECH SEUREI 💻🔥</strong></p>
+</footer>
+
+</body>
+</html>
