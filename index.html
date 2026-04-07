@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kapenguria School</title>
 
+<!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
 <style>
 html { scroll-behavior: smooth; }
 
@@ -24,7 +30,6 @@ body {
     z-index: -1;
 }
 
-/* STARS */
 .star {
     position: absolute;
     width: 2px;
@@ -39,7 +44,6 @@ body {
     to { opacity: 1; }
 }
 
-/* SHOOTING STARS */
 .shooting-star {
     position: absolute;
     width: 2px;
@@ -51,12 +55,12 @@ body {
 
 @keyframes shoot {
     0% { transform: translate(0,0) rotate(45deg); opacity: 1; }
-    100% { transform: translate(600px,600px) rotate(45deg); opacity: 0; }
+    100% { transform: translate(700px,700px) rotate(45deg); opacity: 0; }
 }
 
 /* NAV */
 nav {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     padding: 15px;
     text-align: center;
     position: sticky;
@@ -68,6 +72,10 @@ nav a {
     margin: 15px;
     text-decoration: none;
     font-weight: bold;
+}
+
+nav a:hover {
+    color: #00ff9d;
 }
 
 /* HERO */
@@ -89,22 +97,14 @@ nav a {
     opacity: 0.8;
 }
 
-/* HEADINGS */
-h2 {
-    color: #00e5ff;
-    text-shadow: 0 0 10px #00e5ff;
-}
-
-h3 {
-    color: #00ff9d;
-    text-shadow: 0 0 8px #00ff9d;
-}
-
-/* SECTION */
+/* SECTIONS */
 section {
     padding: 60px 20px;
     text-align: center;
 }
+
+h2 { color: #00e5ff; }
+h3 { color: #00ff9d; }
 
 /* CARD */
 .card {
@@ -113,7 +113,6 @@ section {
     margin: 20px auto;
     border-radius: 15px;
     max-width: 900px;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(0,229,255,0.3);
 }
 
@@ -134,7 +133,6 @@ footer {
     background: black;
     padding: 20px;
     text-align: center;
-    border-top: 1px solid #00e5ff;
 }
 </style>
 
@@ -147,6 +145,7 @@ footer {
 <nav>
     <a href="#about">About</a>
     <a href="#academics">Academics</a>
+    <a href="#cbc">CBC</a>
     <a href="#values">Values</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
@@ -158,11 +157,16 @@ footer {
 </div>
 
 <section id="about">
-    <h2>About Our School 📘</h2>
+    <h2>About & History 📘</h2>
     <div class="card">
         <p>
-            Kapenguria School is a leading institution known for academic excellence and discipline.
-            Students are guided by experienced teachers to achieve success and develop strong values.
+        Kapenguria School (formerly Kapenguria Boys High School) is a public boys’ boarding secondary school in West Pokot County, Kenya. 
+        The institution began as a primary school in 1938 and later became a secondary school in 1984. 
+        It has grown into one of the leading schools in the region.
+        </p>
+        <p>
+        The school is located near Kapenguria town, the administrative headquarters of West Pokot County, along the A1 road northeast of Kitale.
+        Students live on campus throughout the school year.
         </p>
     </div>
 </section>
@@ -171,9 +175,19 @@ footer {
     <h2>Academics 📚</h2>
     <div class="card">
         <p>
-            The school offers a wide curriculum including sciences, mathematics, languages,
-            and technical subjects that prepare students for future careers.
+        The school offers sciences, mathematics, languages, and technical subjects that prepare students for careers and university education.
         </p>
+    </div>
+</section>
+
+<section id="cbc">
+    <h2>CBC Pathways 📘</h2>
+    <div class="card">
+        <ul style="text-align:left;">
+            <li><strong>STEM:</strong> Pure Sciences, Applied Sciences, Technical Studies</li>
+            <li><strong>Social Sciences:</strong> Languages, Humanities, Business Studies</li>
+            <li><strong>Arts & Sports:</strong> Arts and Sports Track</li>
+        </ul>
     </div>
 </section>
 
@@ -196,29 +210,34 @@ footer {
     </div>
 </section>
 
+<!-- ✅ FIXED GALLERY -->
 <section id="gallery">
     <h2>School Gallery 🖼️</h2>
     <div class="gallery">
-        <img src="https://i.imgur.com/ndYSZjw.jpeg">
-        <img src="https://i.imgur.com/Odskk9z.jpeg">
+        <img src="https://i.imgur.com/otMBEpA.png" alt="School highlight">
+        <img src="https://i.imgur.com/dgsYlx3.png" alt="School activity">
+        <img src="https://i.imgur.com/8rJyQho.png" alt="School laboratory">
+        <img src="https://i.imgur.com/ndYSZjw.jpeg" alt="Main building">
+        <img src="https://i.imgur.com/Odskk9z.jpeg" alt="Basketball team">
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact 📞</h2>
-    <p>Address: 343-30600, Kapenguria</p>
-    <p>Tel: 0743343343</p>
+    <p>Address: P.O. Box 343-30600, Kapenguria</p>
+    <p>Tel: 0743 343 343</p>
     <p>Email: kapeboys@gmail.com</p>
 </section>
 
 <footer>
-    <p>Website developed by <strong>LEWIS KIPKOECH SEUREI</strong></p>
+    <p>© 2026 Kapenguria School</p>
+    <p>Website developed by <strong>Lewis Kipkoech Seurei</strong></p>
 </footer>
 
 <script>
 const galaxy = document.getElementById("galaxy");
 
-for (let i = 0; i < 120; i++) {
+for (let i = 0; i < 200; i++) {
     let star = document.createElement("div");
     star.className = "star";
     star.style.top = Math.random() * 100 + "%";
@@ -226,7 +245,7 @@ for (let i = 0; i < 120; i++) {
     galaxy.appendChild(star);
 }
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 6; i++) {
     let s = document.createElement("div");
     s.className = "shooting-star";
     s.style.top = Math.random() * 50 + "%";
