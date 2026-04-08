@@ -1,259 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kapenguria School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapenguria School</title>
 
-<!-- FAVICON -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
 
-<style>
-html { scroll-behavior: smooth; }
+  <style>
+    html { scroll-behavior: smooth; }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: #e0f7ff;
-    background: radial-gradient(circle at center, #020111, #000000);
-    overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0f7ff;
+      background: radial-gradient(circle at center, #020111, #000000);
+      overflow-x: hidden;
+    }
 
-/* GALAXY */
-.galaxy {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+    .galaxy {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s infinite alternate;
-}
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite alternate;
+    }
 
-@keyframes twinkle {
-    from { opacity: 0.2; }
-    to { opacity: 1; }
-}
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
 
-.shooting-star {
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: linear-gradient(white, transparent);
-    transform: rotate(45deg);
-    animation: shoot 6s linear infinite;
-}
+    .shooting-star {
+      position: absolute;
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(white, transparent);
+      transform: rotate(45deg);
+      animation: shoot 6s linear infinite;
+    }
 
-@keyframes shoot {
-    0% { transform: translate(0,0) rotate(45deg); opacity: 1; }
-    100% { transform: translate(700px,700px) rotate(45deg); opacity: 0; }
-}
+    @keyframes shoot {
+      0% { transform: translate(0,0) rotate(45deg); opacity: 1; }
+      100% { transform: translate(700px,700px) rotate(45deg); opacity: 0; }
+    }
 
-/* NAV */
-nav {
-    background: rgba(0,0,0,0.8);
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-}
+    nav {
+      background: rgba(0,0,0,0.8);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
 
-nav a {
-    color: #00e5ff;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    nav a {
+      color: #00e5ff;
+      margin: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-nav a:hover {
-    color: #00ff9d;
-}
+    nav a:hover {
+      color: #00ff9d;
+    }
 
-/* HERO */
-.hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.hero h1 {
-    font-size: 55px;
-    color: #00e5ff;
-    text-shadow: 0 0 25px #00e5ff;
-}
+    .hero h1 {
+      font-size: 55px;
+      color: #00e5ff;
+      text-shadow: 0 0 25px #00e5ff;
+    }
 
-.hero p {
-    opacity: 0.8;
-}
+    .hero p {
+      opacity: 0.8;
+    }
 
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-h2 { color: #00e5ff; }
-h3 { color: #00ff9d; }
+    h2 { color: #00e5ff; }
+    h3 { color: #00ff9d; }
 
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    margin: 20px auto;
-    border-radius: 15px;
-    max-width: 900px;
-    border: 1px solid rgba(0,229,255,0.3);
-}
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 900px;
+      border: 1px solid rgba(0,229,255,0.3);
+    }
 
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-}
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-/* FOOTER */
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-}
-</style>
-
+    footer {
+      background: black;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="galaxy" id="galaxy"></div>
+  <div class="galaxy" id="galaxy"></div>
 
-<nav>
+  <nav>
     <a href="#about">About</a>
     <a href="#academics">Academics</a>
     <a href="#cbc">CBC</a>
     <a href="#values">Values</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
-</nav>
+  </nav>
 
-<div class="hero">
+  <div class="hero">
     <h1>Kapenguria School 🎓</h1>
     <p>Shaping Future Leaders • Excellence • Discipline • Success</p>
-</div>
+  </div>
 
-<section id="about">
+  <section id="about">
     <h2>About & History 📘</h2>
     <div class="card">
-        <p>
-        Kapenguria School (formerly Kapenguria Boys High School) is a public boys’ boarding secondary school in West Pokot County, Kenya. 
-        The institution began as a primary school in 1938 and later became a secondary school in 1984. 
-        It has grown into one of the leading schools in the region.
-        </p>
-        <p>
-        The school is located near Kapenguria town, the administrative headquarters of West Pokot County, along the A1 road northeast of Kitale.
-        Students live on campus throughout the school year.
-        </p>
+      <p>Kapenguria School (formerly Kapenguria Boys High School) is a public boys’ boarding secondary school in West Pokot County, Kenya. The institution began as a primary school in 1938 and later became a secondary school in 1984. It has grown into one of the leading schools in the region.</p>
+      <p>The school is located near Kapenguria town, the administrative headquarters of West Pokot County, along the A1 road northeast of Kitale. Students live on campus throughout the school year.</p>
     </div>
-</section>
+  </section>
 
-<section id="academics">
+  <section id="academics">
     <h2>Academics 📚</h2>
     <div class="card">
-        <p>
-        The school offers sciences, mathematics, languages, and technical subjects that prepare students for careers and university education.
-        </p>
+      <p>The school offers sciences, mathematics, languages, and technical subjects that prepare students for careers and university education.</p>
     </div>
-</section>
+  </section>
 
-<section id="cbc">
+  <section id="cbc">
     <h2>CBC Pathways 📘</h2>
     <div class="card">
-        <ul style="text-align:left;">
-            <li><strong>STEM:</strong> Pure Sciences, Applied Sciences, Technical Studies</li>
-            <li><strong>Social Sciences:</strong> Languages, Humanities, Business Studies</li>
-            <li><strong>Arts & Sports:</strong> Arts and Sports Track</li>
-        </ul>
+      <ul style="text-align:left;">
+        <li><strong>STEM:</strong> Pure Sciences, Applied Sciences, Technical Studies</li>
+        <li><strong>Social Sciences:</strong> Languages, Humanities, Business Studies</li>
+        <li><strong>Arts & Sports:</strong> Arts and Sports Track</li>
+      </ul>
     </div>
-</section>
+  </section>
 
-<section id="values">
+  <section id="values">
     <h2>School Values ⭐</h2>
-
     <div class="card">
-        <h3>Excellence 🏆</h3>
-        <p>Students are encouraged to achieve their best through discipline and hard work.</p>
+      <h3>Excellence 🏆</h3>
+      <p>Students are encouraged to achieve their best through discipline and hard work.</p>
     </div>
-
     <div class="card">
-        <h3>Integrity 🤝</h3>
-        <p>Honesty and responsibility guide students in all aspects of life.</p>
+      <h3>Integrity 🤝</h3>
+      <p>Honesty and responsibility guide students in all aspects of life.</p>
     </div>
-
     <div class="card">
-        <h3>Teamwork 👥</h3>
-        <p>Students work together to build unity and leadership skills.</p>
+      <h3>Teamwork 👥</h3>
+      <p>Students work together to build unity and leadership skills.</p>
     </div>
-</section>
+  </section>
 
-<!-- ✅ FIXED GALLERY -->
-<section id="gallery">
+  <section id="gallery">
     <h2>School Gallery 🖼️</h2>
     <div class="gallery">
-        <img src="https://i.imgur.com/otMBEpA.png" alt="School highlight">
-        <img src="https://i.imgur.com/dgsYlx3.png" alt="School activity">
-        <img src="https://i.imgur.com/8rJyQho.png" alt="School laboratory">
-        <img src="https://i.imgur.com/ndYSZjw.jpeg" alt="Main building">
-        <img src="https://i.imgur.com/Odskk9z.jpeg" alt="Basketball team">
+      <img src="https://i.imgur.com/otMBEpA.png" alt="School highlight">
+      <img src="https://i.imgur.com/dgsYlx3.png" alt="School activity">
+      <img src="https://i.imgur.com/8rJyQho.png" alt="School laboratory">
+      <img src="https://i.imgur.com/ndYSZjw.jpeg" alt="Main building">
+      <img src="https://i.imgur.com/Odskk9z.jpeg" alt="Basketball team">
     </div>
-</section>
+  </section>
 
-<section id="contact">
+  <section id="contact">
     <h2>Contact 📞</h2>
     <p>Address: P.O. Box 343-30600, Kapenguria</p>
     <p>Tel: 0743 343 343</p>
     <p>Email: kapeboys@gmail.com</p>
-</section>
+  </section>
 
-<footer>
+  <footer>
     <p>© 2026 Kapenguria School</p>
     <p>Website developed by <strong>Lewis Kipkoech Seurei</strong></p>
-</footer>
+  </footer>
 
-<script>
-const galaxy = document.getElementById("galaxy");
+  <script>
+    const galaxy = document.getElementById("galaxy");
 
-for (let i = 0; i < 200; i++) {
-    let star = document.createElement("div");
-    star.className = "star";
-    star.style.top = Math.random() * 100 + "%";
-    star.style.left = Math.random() * 100 + "%";
-    galaxy.appendChild(star);
-}
+    for (let i = 0; i < 200; i++) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      galaxy.appendChild(star);
+    }
 
-for (let i = 0; i < 6; i++) {
-    let s = document.createElement("div");
-    s.className = "shooting-star";
-    s.style.top = Math.random() * 50 + "%";
-    s.style.left = Math.random() * 50 + "%";
-    s.style.animationDelay = Math.random() * 5 + "s";
-    galaxy.appendChild(s);
-}
-</script>
+    for (let i = 0; i < 6; i++) {
+      let s = document.createElement("div");
+      s.className = "shooting-star";
+      s.style.top = Math.random() * 50 + "%";
+      s.style.left = Math.random() * 50 + "%";
+      s.style.animationDelay = Math.random() * 5 + "s";
+      galaxy.appendChild(s);
+    }
+  </script>
 
 </body>
 </html>
